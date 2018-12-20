@@ -11,7 +11,8 @@ RUN yum-config-manager --add-repo https://download.docker.com/linux/centos/docke
 RUN yum install -y docker-ce
 RUN groupadd docker; exit 0
 RUN usermod -aG docker jenkins; exit 0
-RUN usermod -aG wheel default; exit 0
+RUN rm /usr/lib/systemd/system/docker.service 
+RUN curl -k https://raw.githubusercontent.com/DerBrecher/custom-jenkins/master/image-stream.yaml >> /usr/lib/systemd/system/docker.service 
 RUN echo "Finished Installing Docker"
 
 USER jenkins

@@ -1,7 +1,6 @@
 #build
-kind : "BuildConfig"
-
 apiVersion: "v1"
+kind : "BuildConfig"
 metadata:
   name: "custom-jenkins"
 spec:
@@ -10,9 +9,11 @@ spec:
       uri: "https://github.com/DerBrecher/custom-jenkins"
 #    sourceSecret:
 #      name: openshift secret name
+    type: Git
   strategy:
-    type: Docker
-    dockerfilePath: Dockerfile
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+      type: Docker
   output:
     to:
       kind: "ImageStreamTag"

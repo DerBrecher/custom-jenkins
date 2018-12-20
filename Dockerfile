@@ -1,6 +1,6 @@
 #custom Jenkins with docker
 
-FROM openshift/jenkins-slave-base-centos7
+FROM openshift/jenkins-2-centos7
 
 USER root
 

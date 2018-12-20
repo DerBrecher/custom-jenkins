@@ -11,3 +11,7 @@ spec:
   strategy:
     type: Docker
     dockerfilePath: Dockerfile
+  output:
+    to:
+      kind: "ImageStreamTag"
+      name: "custom-jenkins"

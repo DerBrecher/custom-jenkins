@@ -17,4 +17,4 @@ spec:
   output:
     to:
       kind: "ImageStreamTag"
-      name: "custom-jenkins:latest"
+      name: "custom-jenkins"

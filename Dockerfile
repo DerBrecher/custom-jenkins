@@ -9,8 +9,8 @@ RUN whoami
 RUN yum install -y yum-utils device-mapper-persistent-data lvm2
 RUN yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 RUN yum install -y docker-ce
-#RUN groupadd docker
-#RUN usermode -aG docker jenkins
+RUN groupadd docker; exit 0
+RUN usermode -aG docker jenkins; exit 0
 RUN echo "Finished Installing Docker"
 
 USER jenkins

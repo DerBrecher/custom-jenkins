@@ -8,10 +8,12 @@ spec:
   source:
     git:
       uri: "https://github.com/DerBrecher/custom-jenkins"
+#    sourceSecret:
+#      name: openshift secret name
   strategy:
     type: Docker
     dockerfilePath: Dockerfile
   output:
     to:
       kind: "ImageStreamTag"
-      name: "custom-jenkins"
+      name: "custom-jenkins:latest"

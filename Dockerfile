@@ -19,7 +19,7 @@ RUN	rollup -v
 RUN	npm list -g rollup-plugin-babel
 RUN	npm list -g rollup-plugin-terser
 RUN yum install -y rsync
-RUN	rsync --verison
+RUN	rsync --version
 
 
 #RUN whoami

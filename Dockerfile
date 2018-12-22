@@ -11,15 +11,15 @@ RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
 	yum install -y nodejs npm && \
 	node -v && \
 	npm -v
-RUN npm install -g rollup && \
-	npm install -g rollup-plugin-babel && \
-	npm install -g rollup-plugin-terser && \
-	npm install -g rollup-plugin-progress &&\
-	rollup -v && \
-	npm list rollup-plugin-babel && \
-	npm list rollup-plugin-terser
-RUN yum install -y rsync && \
-	rsync --verison
+RUN npm install -g rollup
+RUN	npm install -g rollup-plugin-babel
+RUN	npm install -g rollup-plugin-terser
+RUN	npm install -g rollup-plugin-progress
+RUN	rollup -v
+RUN	npm list rollup-plugin-babel
+RUN	npm list rollup-plugin-terser
+RUN yum install -y rsync
+RUN	rsync --verison
 
 
 #RUN whoami

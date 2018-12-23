@@ -6,7 +6,7 @@ USER 0
 
 
 
-#ECHO "Installing Nodejs"
+RUN echo "Installing Nodejs"
 #RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
 #	yum install -y nodejs npm && \
 #	node -v && \
@@ -19,7 +19,7 @@ USER 0
 #RUN	rollup -v
 #RUN	npm list -g rollup-plugin-babel
 #RUN	npm list -g rollup-plugin-terser
-ECHO "Installing rsync"
+RUN echo "Installing rsync"
 RUN	yum install -y rsync
 RUN	rsync --version
 

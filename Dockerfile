@@ -2,11 +2,11 @@
 
 FROM openshift/jenkins-2-centos7
 
-USER root
+USER 0
 
 
 
-#RUN echo "Installing Nodejs"
+#ECHO "Installing Nodejs"
 #RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
 #	yum install -y nodejs npm && \
 #	node -v && \
@@ -19,6 +19,7 @@ USER root
 #RUN	rollup -v
 #RUN	npm list -g rollup-plugin-babel
 #RUN	npm list -g rollup-plugin-terser
+ECHO "Installing rsync"
 RUN	yum install -y rsync
 RUN	rsync --version
 
@@ -33,5 +34,5 @@ RUN	rsync --version
 #RUN curl -k https://raw.githubusercontent.com/DerBrecher/custom-jenkins/master/docker.service >> /usr/lib/systemd/system/docker.service
 #RUN echo "Finished Installing Docker"
 
-USER jenkins
+#USER jenkins
 #RUN whoami
